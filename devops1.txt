@@ -82,6 +82,8 @@ git push origin v1.0
 git tag -d v1.0
 git push origin -d v1.0
 
+6.
+java -cp sample-1.0-SNAPSHOT.jar com.google.calculator
 
 7. 
 jenkins->freestyle
