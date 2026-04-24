@@ -1,0 +1,133 @@
+1.
+mkdir gitdemo
+cd gitdemo
+git init
+git config --global user.name "Mohith"
+git config --global user.email mohith@gmail.com
+echo "peedhi" > f1.txt
+git status 
+git add .
+git commit -m "commited"
+modify for f1.txt
+git log
+
+
+
+2.
+git branch new2
+git checkout new2
+echo "hello hi" > f2.txt
+git status
+git add .
+git commit -m "branch"
+git checkout master
+echo "bye" > f2.txt
+git status
+git add .
+git commit -m "master"
+git merge new2
+go to f2.txt and change any one branch (manually)
+git add .
+git commit -m "merged"
+git status
+git log
+
+
+
+3.
+git init
+git config
+echo "hi peedhi" > f1.txt
+git add .
+git commit -m "commit"
+(in git GitHub create a new repository with readme- copy the path url)
+git remote add origin <url>
+git checkout main
+git push -u origin main
+git pull origin main
+git status 
+git log 
+
+
+4.
+git init
+git clone <GitHub url>
+cd gitdemo
+echo "good" > f1.txt
+git add .
+ git commit -m "commit"
+git push origin main
+git pull origin main
+git branch new1
+git checkout new1
+echo "bye" > f1.txt
+echo "heloo" > f2.txt
+git add .
+git commit -m "commmited"
+git push origin new1
+(GITHUB)
+git checkout main
+git pull origin main
+
+
+5. 
+echo "hi" > f1.txt
+git add .
+git commit -m "commit"
+git tag v1.0
+git tag
+git remote add origin <url>
+git push origin v1.0
+(GitHub)
+git tag -d v1.0
+git push origin -d v1.0
+
+
+7. 
+jenkins->freestyle
+javac BankService.java
+java BankService
+
+
+8. 
+jenkins->freestyle
+poll scm * * * * *
+build 1 time
+go back code make changes
+refresh Jenkins build 2 will appear
+
+webbook
+jenkins-pipeline
+github->settings->webbook
+url- https://your-jenkins-instance.com
+content type- application/json
+
+
+9.
+jrnkins->pipeline
+build: addition of two number
+pipeline {
+    agent any // Defines that the pipeline can run on any available agent
+    stages {
+        stage('Addition') {
+            steps {
+                script {
+                    // Define variables and perform addition
+                    def num1 = 10
+                    def num2 = 20
+                    def sum = num1 + num2
+                    
+                    // Print the result to the console
+                    echo "The sum of ${num1} and ${num2} is: ${sum}"
+                }
+            }
+        }
+    }
+}
+build
+(only console output)
+
+
+10. stage view
+overview
+pipline steps
